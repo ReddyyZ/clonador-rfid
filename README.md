@@ -15,10 +15,6 @@ O sistema possui duas funções principais:
 - **LER** — energiza o cartão aproximado, detecta a tag e captura o seu UID (4 bytes), exibindo-o no display e guardando-o na memória.
 - **GRAVAR** — grava o UID previamente capturado em um cartão magic de destino (Gen1A ou CUID), efetivamente criando uma cópia.
 
-> 📷 **[ESPAÇO PARA IMAGEM: foto do protótipo montado na protoboard, ligado e exibindo o menu no OLED]**
-
----
-
 ## 👥 Autores
 
 Projeto desenvolvido para a disciplina de Eletrônica para Computação - ICMC/USP.
@@ -55,8 +51,6 @@ flowchart TD
     L -->|OK| B
 ```
 
----
-
 ## 🧰 Hardware Necessário
 
 | Componente                              | Qtd. | Função no projeto                                                                    |
@@ -69,8 +63,6 @@ flowchart TD
 | Jumpers macho-macho                     | ~14  | Ligações internas na protoboard (alimentação, botões, OLED)                          |
 | Jumpers macho-fêmea                     |  7   | Ligação do RC522 (montado "voador", fora da protoboard)                              |
 | Cabo USB-C                              |  1   | Alimentação e gravação do firmware                                                   |
-
----
 
 ## 🔌 Esquema de Ligação
 
@@ -110,8 +102,6 @@ O circuito montado deste projeto:
 
 ![Circuito do clonador](circuito.png)
 
----
-
 ## 📚 Bibliotecas
 
 Instale as seguintes bibliotecas pelo **Library Manager** da Arduino IDE (`Sketch → Include Library → Manage Libraries...`) para executar o projeto:
@@ -120,8 +110,6 @@ Instale as seguintes bibliotecas pelo **Library Manager** da Arduino IDE (`Sketc
 | ---------------- | ------------ | -------------------------------------------------------------- |
 | **MFRC522**      | miguelbalboa | Driver do leitor RC522                                         |
 | **SSD1306Ascii** | Bill Greiman | Driver leve do display OLED, escolhida por consumir pouca SRAM |
-
----
 
 ## 🃏 Sobre os "Magic Cards"
 
@@ -133,7 +121,5 @@ Os chamados **magic cards** são cartões especiais em que esse bloco é regrav�
 - **CUID (Gen2)** — permitem escrever no bloco 0 usando comandos padrão de escrita MIFARE, comportando-se como um cartão comum, porém com o bloco 0 destravado.
 
 A função **GRAVAR** deste projeto grava o UID capturado em cartões desses tipos. Ao aproximar um cartão comum na etapa de gravação, a operação falha com a mensagem `Cartao nao e magic`, exatamente o comportamento esperado, que ajuda a demonstrar por que a maioria dos cartões não pode ser copiada.
-
----
 
 ## 🎥 Demonstração
