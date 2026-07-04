@@ -15,7 +15,7 @@ O sistema possui duas funções principais:
 - **LER**: energiza o cartão aproximado, detecta a tag e captura o seu UID (4 bytes), exibindo-o no display e guardando-o na memória.
 - **GRAVAR:** grava o UID previamente capturado em um cartão magic de destino (Gen1A ou CUID), efetivamente criando uma cópia.
 
-## 👥 Autores
+## Autores
 
 Projeto desenvolvido para a disciplina de Eletrônica para Computação - ICMC/USP.
 
@@ -26,7 +26,7 @@ Projeto desenvolvido para a disciplina de Eletrônica para Computação - ICMC/U
 | Henrique Nechet Halfeld   | 17896280 |
 | Jader Tomson Kalil Sphair | 17869762 |
 
-## 🔁 Diagrama de Funcionamento
+## Diagrama de Funcionamento
 
 ```mermaid
 flowchart TD
@@ -51,7 +51,7 @@ flowchart TD
     L -->|OK| B
 ```
 
-## 🧰 Hardware Necessário
+## Hardware Necessário
 
 | Componente                              | Qtd. | Função no projeto                                                                    |
 | --------------------------------------- | :--: | ------------------------------------------------------------------------------------ |
@@ -64,7 +64,7 @@ flowchart TD
 | Jumpers macho-fêmea                     |  7   | Ligação do RC522 (montado "voador", fora da protoboard)                              |
 | Cabo USB-C                              |  1   | Alimentação e gravação do firmware                                                   |
 
-## 🔌 Esquema de Ligação
+## Esquema de Ligação
 
 O circuito usa **SPI** para o leitor RC522 e **I2C** para o display OLED. Os três botões usam o resistor de _pull-up_ interno do microcontrolador (`INPUT_PULLUP`), dispensando resistores externos.
 
@@ -102,7 +102,7 @@ O circuito montado deste projeto:
 
 ![Circuito do clonador](circuito.png)
 
-## 📚 Bibliotecas
+## Bibliotecas
 
 Instale as seguintes bibliotecas pelo **Library Manager** da Arduino IDE (`Sketch → Include Library → Manage Libraries...`) para executar o projeto:
 
@@ -111,7 +111,7 @@ Instale as seguintes bibliotecas pelo **Library Manager** da Arduino IDE (`Sketc
 | MFRC522      | miguelbalboa | Driver do leitor RC522                                         |
 | SSD1306Ascii | Bill Greiman | Driver leve do display OLED, escolhida por consumir pouca SRAM |
 
-## 🃏 Sobre os "Magic Cards"
+## Sobre os "Magic Cards"
 
 Um cartão MIFARE Classic 1K comum tem o UID gravado de fábrica em um bloco protegido e somente-leitura (o bloco 0 do setor 0). Por isso, não é possível clonar um cartão para uma tag comum, o UID dela não muda.
 
@@ -123,3 +123,4 @@ Os chamados magic cards são cartões especiais em que esse bloco é regravável
 A função GRAVAR deste projeto grava o UID capturado em cartões desses tipos. Ao aproximar um cartão comum na etapa de gravação, a operação falha com a mensagem `Cartao nao e magic`, exatamente o comportamento esperado, que ajuda a demonstrar por que a maioria dos cartões não pode ser copiada.
 
 ## 🎥 Demonstração
+![Vídeo no youtube](https://www.youtube.com/watch?v=1D164bjYPbw)
