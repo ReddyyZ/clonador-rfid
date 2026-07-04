@@ -123,4 +123,4 @@ Os chamados magic cards são cartões especiais em que esse bloco é regravável
 A função GRAVAR deste projeto grava o UID capturado em cartões desses tipos. Ao aproximar um cartão comum na etapa de gravação, a operação falha com a mensagem `Cartao nao e magic`, exatamente o comportamento esperado, que ajuda a demonstrar por que a maioria dos cartões não pode ser copiada.
 
 ## 🎥 Demonstração
-![Vídeo no youtube](https://www.youtube.com/watch?v=1D164bjYPbw)
+[Vídeo no youtube](https://www.youtube.com/watch?v=1D164bjYPbw)
